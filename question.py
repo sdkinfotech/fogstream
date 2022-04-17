@@ -47,10 +47,13 @@ class Test:
 
     def show_result(self):
 
+        # -- находим правильный ответ -------------------------- #
         if self.results[self.user_answer] == self.test['right']:
             print("True")
         else:
             print("False")
+        # -- находим правильный ответ -------------------------- #
+
         
     
 

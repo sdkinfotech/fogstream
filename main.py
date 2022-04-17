@@ -14,4 +14,3 @@ def run(question):
 if __name__ == "__main__":
     
     run(question_1)
-
