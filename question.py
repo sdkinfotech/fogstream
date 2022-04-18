@@ -46,7 +46,7 @@ class RunTest:
         # -- добавляем перемешанные строки ответов с индексами
         number = 1
         for answer in self.answers:
-            self.results[number] = answer
+            self.results[str(number)] = answer
             number += 1
         # ------------------------------------------------------------------- #
         
@@ -59,16 +59,17 @@ class RunTest:
        
         print("")
         # -- запросим ответ от пользователя ------#
-        self.user_answer = int(input("Введите номер правильного ответа: "))
+        self.user_answer = input("Введите номер правильного ответа: ")
         
 
     def show_result(self):
 
         # -- находим правильный ответ -------------------------- #
         if self.results[self.user_answer] == self.test['right']:
-            print("True")
+            return True
         else:
-            print("False")
+            return False
+    
         # -- находим правильный ответ -------------------------- #
 
         

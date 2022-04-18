@@ -1,20 +1,20 @@
 [
 {
-    "question" : "Как присвоить значение 10 переменной a?",
-    "wrong": ["a == 10", "a : 10", "a ** 10"],
-    "right": "a = 10"
+    "question" : "Что выведет код?\n\nname = 'snow storm'\nprint('%s' % name[6:8])",
+    "wrong": ["s", "sto", "Syntax Error"],
+    "right": "st"
 },
 
 {
-    "question" : "Как присвоить значение 10 переменной a?",
-    "wrong": ["a == 10", "a : 10", "a ** 10"],
-    "right": "a = 10"
+    "question" : "что выведет код?\n\nx = 4.5\ny = 2\nprint(x // y)",
+    "wrong": ["2.25", "2.9", "9.0", "20.25", "21"],
+    "right": "2.0"
 },
 
 {
-    "question" : "Как присвоить значение 10 переменной a?",
-    "wrong": ["a == 10", "a : 10", "a ** 10"],
-    "right": "a = 10"
+    "question" : "Что выведет код?\n\nd = lambda p: p * 2\nt = lambda p: p * 3\nx = 2\nx = d(x)\nx = t(x)\nx = d(x)\nprint(x)",
+    "wrong": ["12", "36", "48"],
+    "right": "24"
 }
 ]
 
