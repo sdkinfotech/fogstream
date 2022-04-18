@@ -1,7 +1,24 @@
 from random import shuffle
+import json
+
+class GetTest:
+
+    def __init__(self, json_file) -> None:
+        
+        self.json_file = json_file
+        with open(self.json_file, 'r', encoding='utf-8') as file: 
+            self.questions = json.load(file)
+    
+    def make_test_list(self):
+
+        test_list = []
+        for item in self.questions:
+            test_list.append(item)
+        return test_list
+        
 
 
-class Test:
+class RunTest:
 
     def __init__(self, test) -> None:
         

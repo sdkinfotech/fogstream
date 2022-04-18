@@ -1,16 +1,13 @@
-from question import Test
+from question import GetTest, RunTest
 
-question_1 = {
-    'question' : 'Как присвоить значение 10 переменной a?',
-    'wrong': ['a == 10', 'a : 10', 'a ** 10'],
-    'right': 'a = 10'
-    }
-
-def run(question):
-    test = Test(question)
-    test.run_test()
-    test.show_result()
 
 if __name__ == "__main__":
+
+    test = GetTest('questions.json')
     
-    run(question_1)
+    for question in test.make_test_list():
+
+        qurrent_test = RunTest(question)
+        qurrent_test.run_test()
+        qurrent_test.show_result()
+    
