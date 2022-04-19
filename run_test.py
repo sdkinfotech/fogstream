@@ -18,7 +18,7 @@ def run_test(json_file, delay):
     TOTAL: подсчет баллов
     TEST_COUNT: подсчет количества тестов
     """
-
+    # -- посдчет вопросов и правильных ответов 
     TOTAL = 0 
     TEST_COUNT = 0 
     
