@@ -1,6 +1,7 @@
 # fogstream
-this is the first project for practice
+Учебный проект: ТЕСТ Python 
 ---------------------------------------
 
-Current application - 
-short tests python questions with simple tasks.  
+10 тестовых вопросов по языку Python 
+После выполнения теста выдается оценка. 
+Данный проект создан в учебных целях. 

@@ -1,21 +1,57 @@
 [
 {
-    "question" : "Что выведет код?\n\nname = 'snow storm'\nprint('%s' % name[6:8])",
-    "wrong": ["s", "sto", "Syntax Error"],
-    "right": "st"
+    "question" : "Необходимо собрать и вывести все уникальные слова\n из строки рекламного текста. Какой из перечисленных \nтипов данных Python подходит лучше всего?",
+    "wrong": ["кортеж (tuple)", "словарь (dict)", "список (list)"],
+    "right": "множество (set)"
 },
 
 {
-    "question" : "что выведет код?\n\nx = 4.5\ny = 2\nprint(x // y)",
+    "question" : "Что будет напечатано?\n\nx = 4.5\ny = 2\nprint(x // y)",
     "wrong": ["2.25", "2.9", "9.0", "20.25", "21"],
     "right": "2.0"
 },
 
 {
-    "question" : "Что выведет код?\n\nd = lambda p: p * 2\nt = lambda p: p * 3\nx = 2\nx = d(x)\nx = t(x)\nx = d(x)\nprint(x)",
+    "question" : "Что будет напечатано?\n\nd = lambda p: p * 2\nt = lambda p: p * 3\nx = 2\nx = d(x)\nx = t(x)\nx = d(x)\nprint(x)",
     "wrong": ["12", "36", "48"],
     "right": "24"
+},
+{
+    "question" : "Как вывести список методов и атрибутов объекта x?",
+    "wrong": ["help(x)", "info(x)", "?x", "help -> x"],
+    "right": "dir(x)"
+},
+{
+    "question" : "Что делает этот код?\n\ndef a(b, c, d): pass",
+    "wrong": ["Определяет список и инициализирует его", "Определяет функцию, которая передает параметры.", "Определяет пустой класс."],
+    "right": "Определяет функцию, которая ничего не делает."
+},
+{
+    "question" : "Что будет напечатано?\n\na = [1,2,3,None,(),[],]\nprint(len(a))",
+    "wrong": ["Syntax Error", "4", "5", "7"],
+    "right": "6"
+},
+{
+    "question" : "Что будет напечатано?\n\nprint(type(1 / 2))",
+    "wrong": ["class 'int'", "class 'number'", "class 'double'", "class 'tuple'"],
+    "right": "class 'float'"
+},
+{
+    "question" : "Что будет напечатано?\n\nkvps  = {'user','bill', 'password','hillary'}\nprint(kvps['password'])",
+    "wrong": ["user", "bill", "password", "hillary"],
+    "right": "Ничего. TypeError."
+},
+{
+    "question" : "Что будет напечатано?\n\nname = 'snow storm'\nprint('%s' % name[6:8])",
+    "wrong": ["st", "sto", "Syntax Error"],
+    "right": "to"
+},
+{
+    "question" : "Для чего в Python используется встроенная функция enumerate()?",
+    "wrong": ["Для определения количества элементов последовательности."],
+    "right": "Для одновременного итерирования по самим элементам и их индексам."
 }
-
 ]
+
+
 

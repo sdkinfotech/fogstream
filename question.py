@@ -5,15 +5,23 @@ class GetTest:
 
     def __init__(self, json_file) -> None:
         
+        """получает тесты из json"""
+        
         self.json_file = json_file
         with open(self.json_file, 'r', encoding='utf-8') as file: 
             self.questions = json.load(file)
     
     def make_test_list(self):
 
+        """
+        формирует список тестов и перемешивает их
+        Возвращает уже перемешанный список в вызов
+        """
+
         test_list = []
         for item in self.questions:
             test_list.append(item)
+        shuffle(test_list)
         return test_list
         
 
@@ -21,6 +29,12 @@ class GetTest:
 class RunTest:
 
     def __init__(self, test) -> None:
+
+        """
+        формирует список вариантов ответов 
+        перемешивает список ответов
+        test: объект с тестом(вопрос - ответы).
+        """
         
         self.test = test
     
@@ -39,6 +53,12 @@ class RunTest:
         
    
     def run_test(self):
+
+        """
+        Отобраает на экране вопрос и варианты ответов.
+        Вариантам ответов присваиваются порядковые индексы
+        Ожидает ответа от пользователя
+        """
         
         # -- сформируем ответы таким образом, чтобы связать их с индексами ---
         # -- контейнер для строк ответов с индексами
@@ -64,12 +84,20 @@ class RunTest:
 
     def show_result(self):
 
+        """
+        сравнивает ответ пользователя с правильным ответом
+        Для этого используется полученное значение из json 
+        ответ пользователя привязан к индексу в словаре.
+        Возвращает True или False
+        """
+
         # -- находим правильный ответ -------------------------- #
         if self.results[self.user_answer] == self.test['right']:
-            
+
             return True
 
         else:
+
             return False
     
         # --  Отобразим очки-------------------------------------- #
