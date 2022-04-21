@@ -1,14 +1,13 @@
-
 from question import GetTest, RunTest
 import os
 import time
 
+
 def clscr():
     """Очистка экрана терминала"""
-    os.system('cls' if os.name=='nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
-    
 def run_test(json_file, delay):
     """
     Запускает программу тестирования. 
@@ -19,9 +18,9 @@ def run_test(json_file, delay):
     TEST_COUNT: подсчет количества тестов
     """
     # -- посдчет вопросов и правильных ответов 
-    TOTAL = 0 
-    TEST_COUNT = 0 
-    
+    TOTAL = 0
+    TEST_COUNT = 0
+
     # -- получаем список тестов из json ---------------#
     test = GetTest(json_file)
     # -- создадим список с тестами --------------------#    
@@ -35,7 +34,7 @@ def run_test(json_file, delay):
             TEST_COUNT += 1
 
             # -- если ответ совпал с правильным 
-        
+
             if current_test.show_result():
                 print("\nПравильно!")
                 TOTAL += 1
@@ -56,7 +55,7 @@ def run_test(json_file, delay):
             while key_error:
                 try:
                     current_test.run_test()
-                
+
                     if current_test.show_result():
                         print("\nПравильно!")
                         TOTAL += 1
@@ -73,4 +72,3 @@ def run_test(json_file, delay):
                     clscr()
 
     print(f"\nОценка : {TOTAL} из {TEST_COUNT} \n")
-    
